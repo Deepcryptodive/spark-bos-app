@@ -1,6 +1,4 @@
 // Original code on which this is based can be found at https://near.org/near/widget/ComponentDetailsPage?src=bluebiu.near/widget/ZKEVM.AAVE
-
-
 const ROUND_DOWN = 0;
 const CONTRACT_ABI = {
   wrappedTokenGatewayV3ABI:
@@ -14,7 +12,7 @@ const CONTRACT_ABI = {
   walletBalanceProviderABI:
     "https://raw.githubusercontent.com/corndao/aave-v3-bos-app/main/abi/WalletBalanceProvider.json",
 };
-const DEFAULT_CHAIN_ID = 1;
+const DEFAULT_CHAIN_ID = 137;
 const NATIVE_SYMBOL_ADDRESS_MAP_KEY = "0x0";
 const ETH_TOKEN = { name: "Ethereum", symbol: "ETH", decimals: 18 };
 const WETH_TOKEN = { name: "Wrapped Ether", symbol: "WETH", decimals: 18 };
@@ -36,7 +34,10 @@ function getNetworkConfig(chainId) {
     FIXED_LIQUIDATION_VALUE: "1.0",
     MAX_UINT_256:
       "0xffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff",
-    AAVE_API_BASE_URL: "https://aave-api.pages.dev",
+    AAVE_API_BASE_URL: "http://localhost:8080",
+    // this connects to our custom Spark Protocol Data Service
+    // see https://github.com/Deepcryptodive/spark-data-service
+    // URL to be changed to https://spark-api.pages.dev/ once DNS is propagated and domain is up
   };
 
   switch (chainId) {
@@ -714,6 +715,18 @@ if (state.walletConnected && state.chainId && loading) {
   updateData();
 }
 
+const PageBackground = styled.div`
+  background-color: #1e202f;
+`;
+
+const StyledContainer = styled.div`
+  color: white;
+  border: 1px solid white;
+  padding-top: 1rem;
+  min-width: 100%;
+  text-align: center;
+`;
+
 const Body = styled.div`
   padding-top: 24px;
   min-height: 100vh;
@@ -768,7 +781,7 @@ const TitleText = styled.div`
 const body = loading ? (
   <>
     <Body>
-      <TitleText>Lending</TitleText>
+      <TitleText>Spark Lend</TitleText>
       <div className="load">
         <Widget
           src={`guessme.near/widget/ZKEVM.AAVE.Loader`}
@@ -935,6 +948,7 @@ const body = loading ? (
 
 return (
   <>
+  <PageBackground>
     <Widget src="guessme.near/widget/ZKEVMWarmUp.generage-uuid" />
     <AAVEContainer>
       {/* Component Head */}
@@ -944,11 +958,12 @@ return (
       />
       {/* Component Body */}
       {body}
-      {!loading ? (
-        <div className="tip">
-          <Widget src={`guessme.near/widget/ZKEVM.switch_quest_card`} />
-        </div>
-      ) : null}
+      {/* Add a new widget at the bottom & title*/}
+      <StyledContainer>
+        <Markdown text={"## Similar Lending Markets"} />
+      </StyledContainer>
+      <Widget src="bluebiu.near/widget/Gnosis.Lending" />
     </AAVEContainer>
+    </PageBackground>
   </>
 );
