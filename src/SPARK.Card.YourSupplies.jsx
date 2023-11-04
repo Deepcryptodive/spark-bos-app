@@ -72,7 +72,13 @@ return (
                                   <img
                                     width={64}
                                     height={64}
-                                    src={`https://app.aave.com/icons/tokens/${row.symbol.toLowerCase()}.svg`}
+                                    src={
+                                      row.symbol === 'GNO'
+                                        ? 'https://docs.gnosischain.com/img/tokens/gno.png'
+                                        : row.symbol === 'WXDAI' || row.symbol === 'XDAI'
+                                        ? 'https://ipfs.near.social/ipfs/bafkreieu6n7cav63nwjj5klcsxrk26eo5pqkc4u7xzfle2bjgi5ijm7ipe'
+                                        : `https://app.aave.com/icons/tokens/${row.symbol.toLowerCase()}.svg`
+                                    }
                                   />,
                                   <div>
                                     <div className="token-title">
