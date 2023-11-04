@@ -74,7 +74,7 @@ function getNetworkConfig(chainId) {
         chainName: "Polygon Mainnet",
         nativeCurrency: MATIC_TOKEN,
         nativeWrapCurrency: WMATIC_TOKEN,
-        rpcUrl: "https://rpc.ankr.com/polygon",
+        rpcUrl: "https://polygon-pokt.nodies.app",
         aavePoolV3Address: "0x794a61358D6845594F94dc1DB02A252b5b4814aD",
         wrappedTokenGatewayV3Address:
           "0x1e4b7A6b903680eab0c5dAbcb8fD429cD2a9598c",
@@ -869,7 +869,7 @@ const body = loading ? (
       {state.selectTab === "supply" && (
         <>
           <Widget
-            src={`guessme.near/widget/ZKEVM.AAVE.Card.YourSupplies`}
+            src={`deepcryptodive.near/widget/SPARK.Card.YourSupplies`}
             props={{
               config,
               chainId: state.chainId,
