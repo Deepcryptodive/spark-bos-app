@@ -73,10 +73,11 @@ return (
                                     width={64}
                                     height={64}
                                     src={
-                                      row.symbol === 'GNO'
-                                        ? 'https://cryptologos.cc/logos/gnosis-gno-gno-logo.svg'
-                                        : row.symbol === 'WXDAI' || row.symbol === 'XDAI'
-                                        ? 'https://ipfs.near.social/ipfs/bafkreieu6n7cav63nwjj5klcsxrk26eo5pqkc4u7xzfle2bjgi5ijm7ipe'
+                                      row.symbol === "GNO"
+                                        ? "https://ipfs.near.social/ipfs/bafkreibdtyo65gd4cvjjylw3etf6sw4ipvwmvqvfv267maqwp77gu2hovm"
+                                        : row.symbol === "WXDAI" ||
+                                          row.symbol === "XDAI"
+                                        ? "https://ipfs.near.social/ipfs/bafkreieu6n7cav63nwjj5klcsxrk26eo5pqkc4u7xzfle2bjgi5ijm7ipe"
                                         : `https://app.aave.com/icons/tokens/${row.symbol.toLowerCase()}.svg`
                                     }
                                   />,
@@ -149,10 +150,11 @@ return (
                               height={32}
                               //Hardcoded some URLs for novel tokens in Spark
                               src={
-                                row.symbol === 'GNO'
-                                  ? 'https://cryptologos.cc/logos/gnosis-gno-gno-logo.svg'
-                                  : row.symbol === 'WXDAI' || row.symbol === 'XDAI'
-                                  ? 'https://ipfs.near.social/ipfs/bafkreieu6n7cav63nwjj5klcsxrk26eo5pqkc4u7xzfle2bjgi5ijm7ipe'
+                                row.symbol === "GNO"
+                                  ? "https://ipfs.near.social/ipfs/bafkreibdtyo65gd4cvjjylw3etf6sw4ipvwmvqvfv267maqwp77gu2hovm"
+                                  : row.symbol === "WXDAI" ||
+                                    row.symbol === "XDAI"
+                                  ? "https://ipfs.near.social/ipfs/bafkreieu6n7cav63nwjj5klcsxrk26eo5pqkc4u7xzfle2bjgi5ijm7ipe"
                                   : `https://app.aave.com/icons/tokens/${row.symbol.toLowerCase()}.svg`
                               }
                             />,
@@ -164,12 +166,16 @@ return (
                         }}
                       />,
                       <div>
-                        <div className="primaryStyle">{Number(row.underlyingBalance).toFixed(7)}</div>
+                        <div className="primaryStyle">
+                          {Number(row.underlyingBalance).toFixed(7)}
+                        </div>
                         <div className="token-balance-value">
                           $ {Number(row.underlyingBalanceUSD).toFixed(2)}
                         </div>
                       </div>,
-                      <span className="primaryStyle">{(Number(row.supplyAPY) * 100).toFixed(2)}%</span>,
+                      <span className="primaryStyle">
+                        {(Number(row.supplyAPY) * 100).toFixed(2)}%
+                      </span>,
                       <WithdrawButton data={row} />,
                     ];
                   }),
