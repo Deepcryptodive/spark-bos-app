@@ -887,7 +887,7 @@ const body = loading ? (
             }}
           />
           <Widget
-            src={`guessme.near/widget/ZKEVM.AAVE.Card.AssetsToSupply`}
+            src={`deepcryptodive.near/widget/SPARK.Card.AssetsToSupply`}
             props={{
               config,
               chainId: state.chainId,
@@ -909,7 +909,7 @@ const body = loading ? (
       {state.selectTab === "borrow" && (
         <>
           <Widget
-            src={`guessme.near/widget/ZKEVM.AAVE.Card.YourBorrows`}
+            src={`deepcryptodive.near/widget/ZKEVM.AAVE.Card.YourBorrows`}
             props={{
               config,
               chainId: state.chainId,
@@ -929,7 +929,7 @@ const body = loading ? (
             }}
           />
           <Widget
-            src={`guessme.near/widget/ZKEVM.AAVE.Card.AssetsToBorrow`}
+            src={`deepcryptodive.near/widget/SPARK.Card.AssetsToBorrow`}
             props={{
               config,
               chainId: state.chainId,
