@@ -3,6 +3,9 @@
 ## Introduction
 During the ETHLisbon hackathon in Nov 2023, I embarked on a project to bridge a crucial gap in decentralized finance (DeFi). Tackling the fragmented user interfaces and centralization risks present in current DeFi frontends, specifically lending platforms. The solution: Spark Nexus, a decentralized frontend built on NEAR's Blockchain Operating System (BOS) focused on interacting with Spark Protocol on the Gnosis and Ethereum mainnet. It's a modular design, which also supports other lending markets and blockchains within the same interface.
 
+![image](https://github.com/Deepcryptodive/spark-bos-app/assets/61325205/898b1f71-1bb4-47a5-af2b-c1c565a7b012)
+
+
 ## Problem Statement
 DeFi enthusiasts often grapple with two main challenges: the complexity of managing multiple interfaces and the centralization risks inherent in frontends, which can compromise the trustless ethos of their underlying applications. Spark Protocol is an Aave V3 fork active on both Ethereum and Gnosis networks. It provides a web2-style interface (via Cloudflare) but has yet to deliver a fully decentralized frontend.
 
@@ -73,3 +76,9 @@ One very useful addition in termpos of UX, would be the development of proactive
 Spark Nexus is more than a random hackathon project — it's a step towards a more accessible and decentralized DeFi ecosystem. We invite the community to explore and contribute to our vision of a truly decentralized financial future.  We expect to see this frontend integrated on https://alpha.dapdap.net/ in the near future; as a real and performant alternative to the [official Spark Protocol frontend](https://spark.fi/).
 
 It allows you to effectively view and manage your assets in one UI. Think of it like a decentralized portfolio tracker such as [DeBank](https://debank.com/) - but one where you can interact with the underlying protocols!
+
+
+
+https://github.com/Deepcryptodive/spark-bos-app/assets/61325205/83e474ad-a725-4317-af34-4e92dd932b15
+
+
