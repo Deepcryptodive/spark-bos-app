@@ -13,7 +13,7 @@ Just this week,[ Spark's official frontend](https://app.spark.fi/) was unavailab
 
 ![Screenshot from 2023-11-02 12-17-36](https://github.com/Deepcryptodive/spark-bos-app/assets/61325205/c3b71c26-02ca-426a-8d6e-5d5ea436869a)
 
-Spark Nexus addresses these challenges by providing a decentralized, intuitive, and chain-agnostic frontend, ensuring a user experience that remains true to DeFi's foundational principles. 
+**Spark Nexus addresses these challenges by providing a decentralized, intuitive, and chain-agnostic frontend, ensuring a user experience that remains true to DeFi's foundational principles.**
 
 
 
@@ -37,7 +37,7 @@ The project was originally forked from [this repository](https://near.org/near/w
 
 ### Key Enhancements
 During the hackathon, we made several notable changes:
-- Developed a dynamic data service (API) for Spark Protocol for real-time fetching and display of on-chain data. [See separate repository](https://github.com/Deepcryptodive/spark-data-service). This provides the frontend with live updates on interest rates, account balances and market conditions.
+- Developed a dynamic data service (API) for Spark Protocol for real-time fetching and display of on-chain data. [See separate repository](https://github.com/Deepcryptodive/spark-data-service). This provides the frontend with live updates on interest rates, account balances and market conditions. This is live in production, open for anyone to query.
 - Integrated privacy-preserving and decentralized RPC providers.
 - Configured all necessary Spark Protocol parameters and customized BOS components. All customized components (>6) are available [here](https://near.org/near/widget/ProfilePage?accountId=deepcryptodive.near&tab=apps) and are deployed on NEAR mainnet.
 
@@ -49,10 +49,9 @@ The final source code for Spark Nexus is deployed on the NEAR mainnet, enabling 
 
 ### GitHub Repository
 For those interested in the development side, the following repositories contains all the code needed. 
-* Frontend (this)
+* [Frontend](https://github.com/Deepcryptodive/spark-nexus) 
 * [Data Service]([url](https://github.com/Deepcryptodive/spark-data-service/))
 You can clone, review, and contribute to the code.
-
 
 ### Local Deployment Guide
 To run Spark Nexus locally:
@@ -60,17 +59,19 @@ To run Spark Nexus locally:
 2. Follow the instructions in [this guide](https://docs.near.org/bos/dev/bos-loader) to run `bos-loader`.
 3. Set the loader URL to your local server, typically `http://127.0.0.1:3030`.
 4. Navigate to `https://near.org/deepcryptodive.near/widget/SPARK` to interact with the locally deployed instance.
-5. For data services, you have the option to run the Spark Data Service locally or host it on Cloudflare. Detailed setup instructions are available in the [Spark Data Service README](https://github.com/Deepcryptodive/spark-data-service/blob/main/README.md).
+5. For the Spark Data Service, you have the option to run it locally, host it on Cloudflare yourself or use the existing deployment. Detailed setup instructions are available in the [Spark Data Service README](https://github.com/Deepcryptodive/spark-data-service/blob/main/README.md).
 
 
 
 ## Future Development
 ### Decentralized Data Service
-Post-hackathon, we aim to pivot to a fully decentralized data service, enhancing trust and resilience. We're exploring solutions like The Graph for indexing and querying, withouth relying on centralized RPC endpoints or the need for self-hosting of the Data Service.
+Post-hackathon, we aim to pivot to a fully decentralized data service, enhancing trust and resilience. We're exploring solutions like The Graph for indexing and querying, withouth relying on centralized RPC endpoints or the need for (self-)hosting of the Data Service.
 
 ### Proactive Risk Management Tools
 One very useful addition in termpos of UX, would be the development of proactive risk management tools. Including customizable alerts for significant token price movements, health factor changes and lending arbitrage. Potential technical solution: WalletConnect's Web3Inbox SDK.
 
+### Speed optimizations
+Loading times can be further reduced, through various optimizations that fell outside of the scope of this hackathon submission.
 
 ## Conclusion
 Spark Nexus is more than a random hackathon project — it's a step towards a more accessible and decentralized DeFi ecosystem. We invite the community to explore and contribute to our vision of a truly decentralized financial future.  We expect to see this frontend integrated on https://alpha.dapdap.net/ in the near future; as a real and performant alternative to the [official Spark Protocol frontend](https://spark.fi/).
