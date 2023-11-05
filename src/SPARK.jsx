@@ -796,10 +796,10 @@ const TitleText = styled.div`
 const body = loading ? (
   <>
     <Body>
-      <TitleText>Spark Lend</TitleText>
+      <TitleText>SparkNexus</TitleText>
       <div className="load">
         <Widget
-          src={`guessme.near/widget/ZKEVM.AAVE.Loader`}
+          src={`deepcryptodive.near/widget/SPARK.Loader`}
           props={{
             walletConnected: state.walletConnected,
             isChainSupported: state.isChainSupported,
