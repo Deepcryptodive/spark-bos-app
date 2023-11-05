@@ -83,3 +83,6 @@ It allows you to effectively view and manage your assets in one UI. Think of it 
 https://github.com/Deepcryptodive/spark-bos-app/assets/61325205/83e474ad-a725-4317-af34-4e92dd932b15
 
 
+Teaser Tweet: https://twitter.com/deepcryptodive/status/1721009082985783560 
+
+
