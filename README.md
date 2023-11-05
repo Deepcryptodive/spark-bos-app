@@ -85,4 +85,4 @@ https://github.com/Deepcryptodive/spark-bos-app/assets/61325205/83e474ad-a725-43
 
 Teaser Tweet: https://twitter.com/deepcryptodive/status/1721009082985783560 
 
-Hackathon presentation: https://www.canva.com/design/DAFzTOh2MhM/20-CQ4YKCzjudf4D_jOOgQ/edit?utm_content=DAFzTOh2MhM&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton
+Hackathon presentation: https://www.canva.com/design/DAFzTOh2MhM/jDOo1wbyscD5yOB7JTIRwQ/view?utm_content=DAFzTOh2MhM&utm_campaign=designshare&utm_medium=link&utm_source=editor
